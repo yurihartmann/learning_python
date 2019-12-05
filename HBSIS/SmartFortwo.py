@@ -16,7 +16,7 @@ class SmartFortwo:
         self.terminal.remove(p1)
         self.terminal.remove(p2)
         print('\033[1;32m')
-        print('Fortwo indo para o aviao = ', p1, ' e ', p2)
+        print('Fortwo indo para o aviao = Motorista: ', p1, ' e Passageiro: ', p2)
         print('\033[m')
         self.aviao.append(p1)
         self.aviao.append(p2)
@@ -27,7 +27,7 @@ class SmartFortwo:
         if p2:
             self.aviao.remove(p2)
         print('\033[1;31m')
-        print('Fortwo voltando para o aviao = ', p1, ' e ', p2)
+        print('Fortwo voltando para o aviao = Motorista: ', p1, ' e Passageiro: ', p2)
         print('\033[m')
         self.terminal.append(p1)
         if p2:
