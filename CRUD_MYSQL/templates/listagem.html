@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Listagem clientes</title>
+</head>
+<body>
+    <h1>Listagem clientes</h1>
+    <a href="/cliente/novo">Criar novo</a>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nome</th>
+                <th>Sobrenome</th>
+                <th>Cpf</th>
+                <th></th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for cliente in clientes: %}
+            <tr>
+                <td>{{ cliente.id }}</td>
+                <td>{{ cliente.nome }}</td>
+                <td>{{ cliente.sobrenome }}</td>
+                <td>{{ cliente.cpf }}</td>
+                <td><a href="/cliente/{{ cliente.id }}">Editar</a></td>
+                <td><a href="/cliente/deletar?id={{ cliente.id }}">Deletar</a></td>
+            </tr>
+        {% endfor %}
+        </tbody>
+
+    </table>
+
+</body>
+</html>
