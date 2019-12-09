@@ -32,3 +32,11 @@
 - Criar tabela Equipe de trabalhadores
 - Criar tabela n - n para Equipe trabalhares e os trabalhadores
 - Criar tabela de linguagem de programação
+
+## Criar Server e rotas - Yuri
+
+- Criar as tres rotas de listagem (trabalhadores, linguagem, equipes)
+
+## Criar Todos as Classes DAOs - Yuri
+
+- TOTAS as classes DAO
