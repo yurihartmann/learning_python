@@ -18,7 +18,7 @@
 
 # TAREFAS
 
-## Criar Classes - Gabriel
+## Criar Classes - Gabriel e Yuri
 
 - Classe Pessoa
 - Classe Trabalhador
@@ -37,6 +37,26 @@
 
 - Criar as tres rotas de listagem (trabalhadores, linguagem, equipes)
 
-## Criar Todos as Classes DAOs - Yuri
+## Criar Todos as Classes DAOs  - Yuri
 
 - TOTAS as classes DAO
+
+## Criar CRUD de Linguagens de programacao  - Yuri
+
+- Listar
+- Editar
+- Criar
+- Deletar
+
+
+## Criar CRUD de Trabalhadores  - Yuri
+
+- Listar
+- Editar
+- Criar
+- Deletar
+
+## Baixar bootstrap e js - Gabriel
+
+- Baixar .cc e js bootstrap
+

@@ -12,11 +12,11 @@ class LinguagemDAO(BaseDAO):
         return lista
 
 
-    def inserir(self, linguagem):
+    def inserir(self, linguagem:Linguagem):
         self.cursor.execute(f'insert into linguagem_de_programacao values (DEFAULT, "{linguagem.get_nome()}")')
         self.con.commit()
 
-    def update(self, linguagem):
+    def update(self, linguagem:Linguagem):
         self.cursor.execute(f'update linguagem_de_programacao set nm_linguagem = "{linguagem.get_nome()}" where cd_linguagem = {linguagem.get_id()}')
         self.con.commit()
 
