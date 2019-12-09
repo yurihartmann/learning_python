@@ -1,18 +1,18 @@
 class Linguagem:
-    def __init__(self, linguagem, numero):
-        self.__linguagem = linguagem
-        self.__numero = numero
+    def __init__(self, nome, id = None):
+        self.__nome = nome
+        self.__id = nome
 
     # getter
-    def get_linguagem(self): 
-        return self.__linguagem 
+    def get_nome(self):
+        return self.__nome
 
-    def get_numero(self):
-        return self.__numero
+    def get_id(self):
+        return self.__id
       
     # setter 
-    def set_linguagem(self, linguagem): 
-        self.__linguagem = linguagem 
+    def set_nome(self, nome):
+        self.__nome = nome
 
-    def set_numero(self, numero):
-        self.__numero = numero
+    def set_id(self, id):
+        self.__id = id
