@@ -1,4 +1,4 @@
-class Pessoa:
+class Equipe_trabalhadores:
     def __init__(self, equipe, trabalhador):
         self.__equipe = equipe
         self.__trabalhador = trabalhador

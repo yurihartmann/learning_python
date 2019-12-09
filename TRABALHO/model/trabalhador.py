@@ -1,4 +1,4 @@
-class Linguagens:
+class Trabalhador:
     def __init__(self, trabalhador, pessoa, numero, valor):
         self.__trabalhador = trabalhador
         self.__pessoa = pessoa

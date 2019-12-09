@@ -1,4 +1,4 @@
-class Pessoa:
+class Linguagem:
     def __init__(self, linguagem, numero):
         self.__linguagem = linguagem
         self.__numero = numero
