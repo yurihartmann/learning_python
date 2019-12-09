@@ -1,0 +1,43 @@
+{% extends "layout.html" %}
+
+{% block title %} Linguagens de Programação {% endblock %}
+
+{% block content %}
+<div class="row text-center p-5">
+    <div class="col-12">
+        <h1>Linguagens de Programação</h1>
+    </div>
+</div>
+<div class="row">
+    <div class="col-12 p-3">
+        <a href="/linguagem/novo">
+            <button class="btn btn-primary">Adicionar nova linguagem</button>
+        </a>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-12">
+        <table class="table">
+          <thead class="thead-dark">
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Nome</th>
+              <th scope="col"></th>
+              <th scope="col"></th>
+            </tr>
+          </thead>
+          <tbody>
+          {% for l in linguagens: %}
+            <tr>
+              <th scope="row">{{ l.get_id() }}</th>
+              <td>{{ l.get_nome() }}</td>
+              <td><button class="btn">Editar</button></td>
+              <td><button class="btn">Excluir</button></td>
+            </tr>
+          {% endfor %}
+          </tbody>
+        </table>
+    </div>
+</div>
+{% endblock %}

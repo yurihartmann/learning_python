@@ -1,7 +1,7 @@
 class Linguagem:
     def __init__(self, nome, id = None):
         self.__nome = nome
-        self.__id = nome
+        self.__id = id
 
     # getter
     def get_nome(self):
