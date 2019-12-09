@@ -14,9 +14,9 @@ def index():
 
 ############## TRABALHADORES
 
-@app.route('/trabalhadores')
+@app.route('/trabalhador')
 def trabalhadores():
-    return 'Trabalhadores'
+    return render_template('trabalhador/listagem.html', trabalhadores = linguagemDAO.listar())
 
 
 ############## EQUIPES

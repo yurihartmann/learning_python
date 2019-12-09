@@ -1,4 +1,4 @@
-from TRABALHO.dao.trabalhadorDAO import BaseDAO
+from TRABALHO.dao.baseDAO import BaseDAO
 from TRABALHO.model.linguagem import Linguagem
 
 

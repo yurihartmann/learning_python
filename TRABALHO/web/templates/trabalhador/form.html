@@ -1,0 +1,40 @@
+{% extends "layout.html" %}
+
+{% block title %} Dados Trabalhador {% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-12 p-3">
+        <a href="/linguagem">
+            <button class="btn btn-secondary">Voltar</button>
+        </a>
+    </div>
+</div>
+
+<div class="row text-center p-5">
+    <div class="col-12">
+        <h1> Dados Linguagem de Programação</h1>
+    </div>
+</div>
+
+
+<div class="row">
+    <div class="col-12 col-md-6 offset-md-3">
+        <form action="/linguagem" method="post">
+
+            <input type="hidden" name="id" value="{{ linguagem.get_id() }}">
+
+            <div class="form-group">
+                <label for="nome_linguagem">Nome da Linguagem:</label>
+                <input type="text" class="form-control"
+                       name="nome_linguagem" id="nome_linguagem" value="{{ linguagem.get_nome() }}"
+                placeholder="Digite o nome da Linguagem">
+            </div>
+
+            <button type="submit" class="btn btn-success">Salvar</button>
+
+        </form>
+    </div>
+</div>
+
+{% endblock %}
