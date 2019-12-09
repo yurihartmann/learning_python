@@ -1,4 +1,3 @@
-
 drop table pessoa;
 drop table trabalhador;
 drop table linguagem_de_programacao;
