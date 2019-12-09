@@ -1,6 +1,6 @@
 import MySQLdb
 
-from crud_mysql.models.Cliente import Cliente
+from CRUD_MYSQL.models.Cliente import Cliente
 
 class ClienteDAO:
 
