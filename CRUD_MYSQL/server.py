@@ -1,6 +1,6 @@
 from flask import Flask, render_template, redirect, request
-from crud_mysql.models.Cliente import Cliente
-from crud_mysql.models.ClienteDAO import ClienteDAO
+from CRUD_MYSQL.models.Cliente import Cliente
+from CRUD_MYSQL.models.ClienteDAO import ClienteDAO
 
 app = Flask(__name__)
 cDAO = ClienteDAO()
