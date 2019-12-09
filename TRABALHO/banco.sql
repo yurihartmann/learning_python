@@ -23,7 +23,7 @@ CREATE TABLE trabalhador(
 
 CREATE TABLE linguagem_de_programacao(
 	cd_linguagem int not null AUTO_INCREMENT,
-	PRIMARY KEY(cd_linguegem),
+	PRIMARY KEY(cd_linguagem),
 	nm_linguagem varchar(100)
 );
 
