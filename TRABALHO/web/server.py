@@ -117,6 +117,7 @@ def salva_equipe():
     # RETORNA PARA A LISTAGEM DE LIGUAGENS
     return redirect('/equipe')
 
+# deletar uma equipe
 @app.route('/equipe/delete/<int:id>')
 def delete_equipe(id):
     # RECEBE VIA ROTA O ID PARA A EXCLUSAO DE UMA LINGUAGEM
@@ -124,12 +125,15 @@ def delete_equipe(id):
     return redirect('/equipe')
 
 
+# formulario para adicionar uma pessoa a uma equipe
 @app.route('/equipe/<int:id>/adicionar-pessoa')
 def adicionar_pessoa(id):
     return render_template('equipes/adicionar_pessoa.html',
                            equipe = equipeDAO.dados_by_id(id),
                            trabalhadores = trabalhadorDAO.listar())
 
+
+# adiciona uma pessoa a uma equipe
 @app.route('/equipe/adicionar-pessoa', methods=['POST'])
 def adicionar_pessoa_salvar():
     id_equipe = request.form['id_equipe']
@@ -141,6 +145,7 @@ def adicionar_pessoa_salvar():
     return redirect('/equipe')
 
 
+# excluir uma pessoa de uma equipe
 @app.route('/equipe/<int:id_equipe>/excluir-pessoa/<int:id_trabalhador>')
 def excluir_pessoa_salvar(id_equipe, id_trabalhador):
     equipe_trabalhadorDAO.deletar(id_equipe, id_trabalhador)

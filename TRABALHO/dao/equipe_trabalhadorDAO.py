@@ -13,6 +13,7 @@ class EquipeTrabalhadorDAO(BaseDAO):
         self.cursor.execute(f'DELETE from equipe_trabalhador WHERE fk_equipe = {id_equipe} and fk_trabalhador = {id_trabalhador}')
         self.con.commit()
 
+    # traz as pessoa que fazem parte de uma equipe
     def lista_pessoas_by_id_equipe(self, id_equipe):
         lista = []
         self.cursor.execute(f'select p.cd_pessoa, p.nm_pessoa, p.vl_idade, t.nm_cargo, t.vl_salario, t.cd_trabalhador, p.cd_pessoa from equipe_trabalhador et, trabalhador t, pessoa p where et.fk_trabalhador = t.cd_trabalhador and t.fk_pessoa = p.cd_pessoa and et.fk_equipe = {id_equipe}')

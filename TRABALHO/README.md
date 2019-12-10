@@ -56,7 +56,22 @@
 - Criar
 - Deletar
 
+## Criar CRUD de Equipe  - Yuri
+
+- Listar
+- Editar
+- Criar
+- Deletar
+
+## Criar sistema para adicinar pessoa a uma equipe e excluir  - Yuri
+
+- pode adicinar uma pessoa a uma equipe
+- poder excluir uma pessoa de uma equipe
+
 ## Baixar bootstrap e js - Gabriel
 
 - Baixar .cc e js bootstrap
 
+## Fazer o template de home - Gabriel
+
+- tela para ser a home da aplicação
