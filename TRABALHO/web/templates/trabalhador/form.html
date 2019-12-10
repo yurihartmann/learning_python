@@ -3,6 +3,7 @@
 {% block title %} Dados Trabalhador {% endblock %}
 
 {% block content %}
+
 <div class="row">
     <div class="col-12 p-3">
         <a href="/trabalhador">
@@ -43,6 +44,7 @@
                        name="cargo" id="cargo" value="{{ trabalhador.get_cargo() }}"
                 placeholder="Digite o nome do cargo">
             </div>
+
             <div class="form-group">
                 <label for="salario">Salário:</label>
                 <input type="text" class="form-control"
@@ -51,9 +53,14 @@
             </div>
 
             <button type="submit" class="btn btn-success">Salvar</button>
-
         </form>
     </div>
 </div>
 
+{% endblock %}
+
+{% block scripts %}
+<script>
+      $('#salario').mask('00/00/0000');
+</script>
 {% endblock %}
