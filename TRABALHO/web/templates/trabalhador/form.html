@@ -5,7 +5,7 @@
 {% block content %}
 <div class="row">
     <div class="col-12 p-3">
-        <a href="/linguagem">
+        <a href="/trabalhador">
             <button class="btn btn-secondary">Voltar</button>
         </a>
     </div>
@@ -13,22 +13,41 @@
 
 <div class="row text-center p-5">
     <div class="col-12">
-        <h1> Dados Linguagem de Programação</h1>
+        <h1>Dados Trabalhador</h1>
     </div>
 </div>
 
 
 <div class="row">
     <div class="col-12 col-md-6 offset-md-3">
-        <form action="/linguagem" method="post">
+        <form action="/trabalhador" method="post">
 
-            <input type="hidden" name="id" value="{{ linguagem.get_id() }}">
+            <input type="hidden" name="id_pessoa" value="{{ trabalhador.get_id_pessoa() }}">
+            <input type="hidden" name="id_trabalhador" value="{{ trabalhador.get_id() }}">
 
             <div class="form-group">
-                <label for="nome_linguagem">Nome da Linguagem:</label>
+                <label for="nome_trabalhador">Nome do Trabalhador:</label>
                 <input type="text" class="form-control"
-                       name="nome_linguagem" id="nome_linguagem" value="{{ linguagem.get_nome() }}"
-                placeholder="Digite o nome da Linguagem">
+                       name="nome_trabalhador" id="nome_trabalhador" value="{{ trabalhador.get_nome() }}"
+                placeholder="Digite o nome da Trabalhador">
+            </div>
+            <div class="form-group">
+                <label for="idade">Idade:</label>
+                <input type="text" class="form-control"
+                       name="idade" id="idade" value="{{ trabalhador.get_idade() }}"
+                placeholder="Digite a idade">
+            </div>
+            <div class="form-group">
+                <label for="cargo">Cargo:</label>
+                <input type="text" class="form-control"
+                       name="cargo" id="cargo" value="{{ trabalhador.get_cargo() }}"
+                placeholder="Digite o nome do cargo">
+            </div>
+            <div class="form-group">
+                <label for="salario">Salário:</label>
+                <input type="text" class="form-control"
+                       name="salario" id="salario" value="{{ trabalhador.get_salario() }}"
+                placeholder="Digite o valor do salario">
             </div>
 
             <button type="submit" class="btn btn-success">Salvar</button>

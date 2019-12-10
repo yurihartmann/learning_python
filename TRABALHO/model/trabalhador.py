@@ -8,7 +8,7 @@ class Trabalhador(Pessoa):
         self.__id = id
         self.__id_pessoa = id_pessoa
 
-    def get_nome_cargo(self):
+    def get_cargo(self):
         return self.__nome_cargo
 
     def get_salario(self):

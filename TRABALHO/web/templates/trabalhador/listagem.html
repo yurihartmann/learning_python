@@ -11,7 +11,7 @@
 <div class="row">
     <div class="col-12 p-3">
         <a href="/trabalhador/novo">
-            <button class="btn btn-primary">Adicionar nova trabalhador</button>
+            <button class="btn btn-primary">Adicionar novo trabalhador</button>
         </a>
     </div>
 </div>
@@ -26,18 +26,20 @@
               <th scope="col">Idade</th>
               <th scope="col">Cargo</th>
               <th scope="col">Salário</th>
+              <th scope="col"></th>
+              <th scope="col"></th>
             </tr>
           </thead>
           <tbody>
-          {% for l in linguagens: %}
+          {% for t in trabalhadores: %}
             <tr>
-
-              <th scope="row">{{ l.get_id() }}</th>
-              <td>{{ l.get_nome() }}</td>
-
-
-              <td><a href="/linguagem/{{ l.get_id() }}"><button class="btn">Editar</button></a></td>
-                <td><a href="/linguagem/delete/{{ l.get_id() }}"><button class="btn">Excluir</button></a></td>
+              <th scope="row">{{ t.get_id() }}</th>
+              <td>{{ t.get_nome() }}</td>
+              <td>{{ t.get_idade() }}</td>
+              <td>{{ t.get_cargo() }}</td>
+              <td>{{ t.get_salario() }}</td>
+              <td><a href="/trabalhador/{{ t.get_id() }}"><button class="btn btn-secondary btn-sm">Editar</button></a></td>
+                <td><a href="/trabalhador/delete/{{ t.get_id_pessoa() }}/{{ t.get_id() }}"><button class="btn btn-danger btn-sm">Excluir</button></a></td>
             </tr>
           {% endfor %}
           </tbody>
