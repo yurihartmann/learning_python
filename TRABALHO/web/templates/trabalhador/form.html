@@ -30,29 +30,33 @@
                 <label for="nome_trabalhador">Nome do Trabalhador:</label>
                 <input type="text" class="form-control"
                        name="nome_trabalhador" id="nome_trabalhador" value="{{ trabalhador.get_nome() }}"
-                placeholder="Digite o nome da Trabalhador">
+                placeholder="Digite o nome da Trabalhador" required>
             </div>
             <div class="form-group">
                 <label for="idade">Idade:</label>
                 <input type="text" class="form-control"
-                       name="idade" id="idade" value="{{ trabalhador.get_idade() }}"
-                placeholder="Digite a idade">
+                       name="idade" maxlength="3" id="idade" value="{{ trabalhador.get_idade() }}"
+                placeholder="Digite a idade" required>
             </div>
             <div class="form-group">
                 <label for="cargo">Cargo:</label>
                 <input type="text" class="form-control"
                        name="cargo" id="cargo" value="{{ trabalhador.get_cargo() }}"
-                placeholder="Digite o nome do cargo">
+                placeholder="Digite o nome do cargo" required>
             </div>
 
             <div class="form-group">
                 <label for="salario">Salário:</label>
+                  <div class="input-group">
+                    <div class="input-group-prepend">
+                      <div class="input-group-text">@</div>
+                    </div>
                 <input type="text" class="form-control"
                        name="salario" id="salario" value="{{ trabalhador.get_salario() }}"
-                placeholder="Digite o valor do salario">
+                placeholder="Digite o valor do salario" required>
             </div>
 
-            <button type="submit" class="btn btn-success">Salvar</button>
+            <button type="submit" class="btn btn-success mt-3">Salvar</button>
         </form>
     </div>
 </div>
@@ -61,6 +65,6 @@
 
 {% block scripts %}
 <script>
-      $('#salario').mask('00/00/0000');
+  $('#salario').mask('000.000.000.000.000,00', {reverse: true});
 </script>
 {% endblock %}
