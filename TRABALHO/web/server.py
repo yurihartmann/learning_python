@@ -4,14 +4,16 @@ sys.path.append('C:/Users/900225/Desktop/python/TRABALHO')
 
 from flask import Flask, render_template, redirect, request
 
-from dao.linguagemDAO import LinguagemDAO
-from model.linguagem import Linguagem
+from TRABALHO.dao.linguagemDAO import LinguagemDAO
+from TRABALHO.model.linguagem import Linguagem
 
-from dao.trabalhadorDAO import TrabalhadorDAO
-from model.trabalhador import Trabalhador
+from TRABALHO.dao.trabalhadorDAO import TrabalhadorDAO
+from TRABALHO.model.trabalhador import Trabalhador
 
-from dao.equipeDAO import EquipeDAO
-from model.equipe import Equipe
+from TRABALHO.dao.equipeDAO import EquipeDAO
+from TRABALHO.model.equipe import Equipe
+
+from TRABALHO.dao.equipe_trabalhadorDAO import EquipeTrabalhadorDAO
 
 
 # INICIANDO O FLASK
@@ -21,7 +23,7 @@ app = Flask(__name__)
 linguagemDAO = LinguagemDAO()
 trabalhadorDAO = TrabalhadorDAO()
 equipeDAO = EquipeDAO()
-
+equipe_trabalhadorDAO = EquipeTrabalhadorDAO()
 
 ############## HOME ########################################################
 
@@ -83,7 +85,8 @@ def equipes():
     return render_template('equipes/listagem.html',
                            equipes = equipeDAO.listar(),
                            linguagemDAO = linguagemDAO,
-                           nav_item = 'equipe')
+                           nav_item = 'equipe',
+                           equipe_trabalhadorDAO = equipe_trabalhadorDAO)
 
 @app.route('/equipe/<string:id>')
 def edicao_equipe(id):
@@ -128,10 +131,22 @@ def adicionar_pessoa(id):
                            trabalhadores = trabalhadorDAO.listar())
 
 @app.route('/equipe/adicionar-pessoa', methods=['POST'])
-def adicionar_pessoa_salvar(id):
-    return render_template('equipes/adicionar_pessoa.html',
-                           equipe = equipeDAO.dados_by_id(id),
-                           trabalhadores = trabalhadorDAO.listar())
+def adicionar_pessoa_salvar():
+    id_equipe = request.form['id_equipe']
+    id_trabalhador = request.form['id_trabalhador']
+    try:
+        equipe_trabalhadorDAO.inserir(id_equipe, id_trabalhador)
+    except:
+        pass
+    return redirect('/equipe')
+
+
+@app.route('/equipe/<int:id_equipe>/excluir-pessoa/<int:id_trabalhador>')
+def excluir_pessoa_salvar(id_equipe, id_trabalhador):
+    equipe_trabalhadorDAO.deletar(id_equipe, id_trabalhador)
+    return redirect('/equipe')
+
+
 
 ############## LINGUAGENS ########################################################
 

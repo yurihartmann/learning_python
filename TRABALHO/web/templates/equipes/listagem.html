@@ -53,6 +53,14 @@
                   </div>
                   <div class="modal-body">
                       <h6>Pessoas na equipe</h6>
+                      <ul>
+                          {% for t in equipe_trabalhadorDAO.lista_pessoas_by_id_equipe(e.get_id()): %}
+                            <li>
+                                <b>Nome:</b> {{ t.get_nome() }} - {{ t.get_cargo() }} anos - <b>Cargo:</b> {{ t.get_cargo() }}
+                                <a href="/equipe/{{ e.get_id() }}/excluir-pessoa/{{ t.get_id() }}" class="btn btn-sm btn-danger ">Excluir</a>
+                            </li>
+                          {% endfor %}
+                      </ul>
                   </div>
                   <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
