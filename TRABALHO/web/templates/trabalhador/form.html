@@ -49,10 +49,10 @@
                 <label for="salario">Salário:</label>
                   <div class="input-group">
                     <div class="input-group-prepend">
-                      <div class="input-group-text">@</div>
+                      <div class="input-group-text">R$</div>
                     </div>
                 <input type="text" class="form-control"
-                       name="salario" id="salario" value="{{ trabalhador.get_salario() }}"
+                       name="salario" id="salario" value="{{ trabalhador.get_salario() }}{{ '0' }}"
                 placeholder="Digite o valor do salario" required>
             </div>
 
