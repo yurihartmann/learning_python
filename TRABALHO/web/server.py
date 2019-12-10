@@ -29,7 +29,8 @@ equipe_trabalhadorDAO = EquipeTrabalhadorDAO()
 
 @app.route('/')
 def index():
-    return "Home"
+    return render_template('home/home.html',
+                           nav_item='home')
 
 ############## TRABALHADORES ########################################################
 
