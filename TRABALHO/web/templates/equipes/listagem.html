@@ -26,6 +26,8 @@
               <th scope="col">Linguagem</th>
               <th scope="col"></th>
               <th scope="col"></th>
+              <th scope="col"></th>
+              <th scope="col"></th>
             </tr>
           </thead>
           <tbody>
@@ -36,9 +38,29 @@
               <td>{{ e.get_nome() }}</td>
               <td>{{ linguagemDAO.dados_by_id(e.get_id_linguagem()).get_nome() }}</td>
 
+              <td><button class="btn btn-info btn-sm" data-toggle="modal" data-target="#verpessoas{{ e.get_id() }}">Ver pessoas</button></td>
+              <td><a href="/equipe/{{ e.get_id() }}/adicionar-pessoa"><button class="btn btn-warning btn-sm">Adicinar pessoa</button></a></td>
               <td><a href="/equipe/{{ e.get_id() }}"><button class="btn btn-secondary btn-sm">Editar</button></a></td>
-                <td><a href="/equipe/delete/{{ e.get_id() }}"><button class="btn btn-danger btn-sm">Excluir</button></a></td>
+              <td><a href="/equipe/delete/{{ e.get_id() }}"><button class="btn btn-danger btn-sm">Excluir</button></a></td>
+
             </tr>
+          <!-- Modal -->
+            <div class="modal fade" id="verpessoas{{ e.get_id() }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Equipe - {{ e.get_nome() }}</h5>
+                  </div>
+                  <div class="modal-body">
+                      <h6>Pessoas na equipe</h6>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
           {% endfor %}
           </tbody>
         </table>

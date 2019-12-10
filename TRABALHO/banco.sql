@@ -38,6 +38,6 @@ CREATE TABLE equipe_trabalhador(
 	fk_equipe int not null,
 	fk_trabalhador int not null,
 	PRIMARY KEY(fk_equipe, fk_trabalhador),
-	FOREIGN KEY(fk_equipe) REFERENCES equipe(cd_equipe),
+	FOREIGN KEY(fk_equipe) REFERENCES equipe(cd_equipe) ON DELETE CASCADE ,
 	FOREIGN KEY(fk_trabalhador) REFERENCES trabalhador(cd_trabalhador)
 );
