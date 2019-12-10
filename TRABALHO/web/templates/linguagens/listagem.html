@@ -32,8 +32,8 @@
             <tr>
               <th scope="row">{{ l.get_id() }}</th>
               <td>{{ l.get_nome() }}</td>
-              <td><a href="/linguagem/{{ l.get_id() }}"><button class="btn">Editar</button></a></td>
-                <td><a href="/linguagem/delete/{{ l.get_id() }}"><button class="btn">Excluir</button></a></td>
+              <td><a href="/linguagem/{{ l.get_id() }}"><button class="btn btn-secondary btn-sm">Editar</button></a></td>
+                <td><a href="/linguagem/delete/{{ l.get_id() }}"><button class="btn btn-danger btn-sm">Excluir</button></a></td>
             </tr>
           {% endfor %}
           </tbody>

@@ -10,6 +10,30 @@
 </head>
 <body>
 
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="#"></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado" aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item {{ active if nav_item == 'home' }}">
+        <a class="nav-link" href="/">Home</a>
+      </li>
+      <li class="nav-item {{ 'active' if nav_item == 'trabalhador' }}">
+        <a class="nav-link" href="/trabalhador">Trabalhadores</a>
+      </li>
+      <li class="nav-item {{ 'active' if nav_item == 'equipes' }}">
+        <a class="nav-link" href="/equipes">Equipes</a>
+      </li>
+      <li class="nav-item {{ 'active' if nav_item == 'linguagem' }}">
+        <a class="nav-link" href="/linguagem">Linguagens</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
     <div class="container">
         {% block content %}
         {% endblock %}
