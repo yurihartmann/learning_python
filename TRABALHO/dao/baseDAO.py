@@ -1,5 +1,6 @@
 import MySQLdb
 
+# CLASSE PARA FAZER A CONECAO COM O BANCO DE DADOS
 
 class BaseDAO:
     def __init__(self):

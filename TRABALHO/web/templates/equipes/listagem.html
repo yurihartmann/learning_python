@@ -1,0 +1,47 @@
+{% extends "layout.html" %}
+
+{% block title %} Equipes {% endblock %}
+
+{% block content %}
+<div class="row text-center p-5">
+    <div class="col-12">
+        <h1>Equipes</h1>
+    </div>
+</div>
+<div class="row">
+    <div class="col-12 p-3">
+        <a href="/equipe/novo">
+            <button class="btn btn-primary">Adicionar nova equipe</button>
+        </a>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-12">
+        <table class="table">
+          <thead class="thead-dark">
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Nome</th>
+              <th scope="col">Linguagem</th>
+              <th scope="col"></th>
+              <th scope="col"></th>
+            </tr>
+          </thead>
+          <tbody>
+          {% for e in equipes: %}
+            <tr>
+
+              <th scope="row">{{ e.get_id() }}</th>
+              <td>{{ e.get_nome() }}</td>
+              <td>{{ linguagemDAO.dados_by_id(e.get_id_linguagem()).get_nome() }}</td>
+
+              <td><a href="/equipe/{{ e.get_id() }}"><button class="btn btn-secondary btn-sm">Editar</button></a></td>
+                <td><a href="/equipe/delete/{{ e.get_id() }}"><button class="btn btn-danger btn-sm">Excluir</button></a></td>
+            </tr>
+          {% endfor %}
+          </tbody>
+        </table>
+    </div>
+</div>
+{% endblock %}
