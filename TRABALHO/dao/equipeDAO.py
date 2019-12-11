@@ -1,5 +1,5 @@
-from TRABALHO.dao.baseDAO import BaseDAO
-from TRABALHO.model.equipe import Equipe
+from dao.baseDAO import BaseDAO
+from model.equipe import Equipe
 
 class EquipeDAO(BaseDAO):
 

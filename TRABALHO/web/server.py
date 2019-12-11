@@ -1,19 +1,20 @@
 import sys
 
+sys.path.append('C:/Users/900225/Desktop/python/TRABALHO')
+
 from flask import Flask, render_template, redirect, request
 
-from TRABALHO.dao.linguagemDAO import LinguagemDAO
-from TRABALHO.model.linguagem import Linguagem
+from dao.linguagemDAO import LinguagemDAO
+from model.linguagem import Linguagem
 
-from TRABALHO.dao.trabalhadorDAO import TrabalhadorDAO
-from TRABALHO.model.trabalhador import Trabalhador
+from dao.trabalhadorDAO import TrabalhadorDAO
+from model.trabalhador import Trabalhador
 
-from TRABALHO.dao.equipeDAO import EquipeDAO
-from TRABALHO.model.equipe import Equipe
+from dao.equipeDAO import EquipeDAO
+from model.equipe import Equipe
 
-from TRABALHO.dao.equipe_trabalhadorDAO import EquipeTrabalhadorDAO
+from dao.equipe_trabalhadorDAO import EquipeTrabalhadorDAO
 
-sys.path.append('C:/Users/900225/Desktop/python/TRABALHO')
 
 # INICIANDO O FLASK
 app: Flask = Flask(__name__)

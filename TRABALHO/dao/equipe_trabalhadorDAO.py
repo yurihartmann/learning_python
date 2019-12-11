@@ -1,5 +1,5 @@
-from TRABALHO.dao.baseDAO import BaseDAO
-from TRABALHO.model.trabalhador import Trabalhador
+from dao.baseDAO import BaseDAO
+from model.trabalhador import Trabalhador
 
 class EquipeTrabalhadorDAO(BaseDAO):
 

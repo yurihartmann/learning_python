@@ -1,4 +1,4 @@
-from TRABALHO.model.pessoa import Pessoa
+from model.pessoa import Pessoa
 
 class Trabalhador(Pessoa):
     def __init__(self, nome, idade, nome_cargo, salario, id = None, id_pessoa = None):

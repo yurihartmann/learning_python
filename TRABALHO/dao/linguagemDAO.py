@@ -1,5 +1,5 @@
-from TRABALHO.dao.baseDAO import BaseDAO
-from TRABALHO.model.linguagem import Linguagem
+from dao.baseDAO import BaseDAO
+from model.linguagem import Linguagem
 
 
 class LinguagemDAO(BaseDAO):
