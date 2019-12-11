@@ -37,7 +37,7 @@
               <td>{{ t.get_nome() }}</td>
               <td>{{ t.get_idade() }}</td>
               <td>{{ t.get_cargo() }}</td>
-              <td>{{ t.get_salario() }}</td>
+              <td>R$ {{ t.get_salario_formatado() }}</td>
               <td><a href="/trabalhador/{{ t.get_id() }}"><button class="btn btn-secondary btn-sm">Editar</button></a></td>
                 <td><a href="/trabalhador/delete/{{ t.get_id_pessoa() }}/{{ t.get_id() }}"><button class="btn btn-danger btn-sm">Excluir</button></a></td>
             </tr>

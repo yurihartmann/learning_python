@@ -31,7 +31,7 @@ CREATE TABLE equipe(
 	PRIMARY KEY(cd_equipe),
 	nm_equipe varchar(100),
 	fk_linguagem int not NULL,
-	FOREIGN KEY(fk_linguagem) REFERENCES linguagem_de_programacao(cd_linguagem)
+	FOREIGN KEY(fk_linguagem) REFERENCES linguagem_de_programacao(cd_linguagem) ON DELETE CASCADE
 );
 
 CREATE TABLE equipe_trabalhador(
@@ -39,5 +39,5 @@ CREATE TABLE equipe_trabalhador(
 	fk_trabalhador int not null,
 	PRIMARY KEY(fk_equipe, fk_trabalhador),
 	FOREIGN KEY(fk_equipe) REFERENCES equipe(cd_equipe) ON DELETE CASCADE ,
-	FOREIGN KEY(fk_trabalhador) REFERENCES trabalhador(cd_trabalhador)
+	FOREIGN KEY(fk_trabalhador) REFERENCES trabalhador(cd_trabalhador)  ON DELETE CASCADE
 );

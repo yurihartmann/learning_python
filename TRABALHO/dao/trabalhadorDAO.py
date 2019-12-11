@@ -34,6 +34,7 @@ class TrabalhadorDAO(BaseDAO):
         self.cursor.execute(f'delete from pessoa where cd_pessoa = {id_pessoa}')
         self.con.commit()
 
+
     # BUSCA OS DADOS DE UM TRABALHADOR NO BANCO DE DADOS
     def dados_by_id(self, id_trabalhador):
         self.cursor.execute(f'select * from trabalhador t, pessoa p where t.fk_pessoa = p.cd_pessoa and t.cd_trabalhador = {id_trabalhador}')

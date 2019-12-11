@@ -11,6 +11,12 @@ class Trabalhador(Pessoa):
     def get_cargo(self):
         return self.__nome_cargo
 
+    def get_salario_formatado(self):
+        try:
+            return f'{self.__salario:.2f}'
+        except:
+            return 0
+
     def get_salario(self):
         return self.__salario
 
