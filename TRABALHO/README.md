@@ -70,7 +70,7 @@
 
 ## Baixar bootstrap e js - Gabriel
 
-- Baixar .cc e js bootstrap
+- Baixar .css e js bootstrap
 
 ## Fazer o template de home - Gabriel
 
